@@ -38,12 +38,12 @@ cd $dir$ss
 cat > config.json << END
 {
     "server":"$IP",
-    "server_port":443,
+    "server_port":2333,
     "local_address": "127.0.0.1",
     "local_port":1080,
-    "password":"wangtongze.tk",
-    "timeout":300,
-    "method":"rc4-md5",
+    "password":"mountainguan",
+    "timeout":600,
+    "method":"aes-256-cfb",
     "fast_open": false,
     "workers": 1
 }
@@ -52,11 +52,11 @@ cd $dir$ss$ss
 chmod +x *.sh
 ./run.sh
 cd $dir
-iptables -I INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+iptables -I INPUT -p tcp -m tcp --dport 2333 -j ACCEPT
 iptables-save
 head="ss://"
-A="rc4-md5:wangtongze.tk@"
-B=":443"
+A="aes-256-cfb:mountainguan@"
+B=":2333"
 
 STR=`echo $A$IP$B | base64`
 string=`echo ${STR/Cg==/}`
@@ -68,9 +68,9 @@ echo $web
 echo "===================================================================="
 echo "Shadowsocks-RSS server info"
 echo "Server ip: $IP"
-echo "Port: 443"
-echo "Password: wangtongze.tk"
-echo "Method: rc4-md5"
+echo "Port: 2333"
+echo "Password: mountainguan"
+echo "Method: aes-256-cfb"
 echo "Local_port: 1080"
 echo "===================================================================="
 echo "If you want to get the lastest client of Shadowsocks-RSS"
