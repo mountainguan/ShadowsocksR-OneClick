@@ -38,6 +38,7 @@ cd $dir$ss
 cat > config.json << END
 {
     "server":"$IP",
+    "server_ipv6": "::",
     "server_port":2333,
     "local_address": "127.0.0.1",
     "local_port":1080,
