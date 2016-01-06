@@ -8,10 +8,10 @@ Only one click to install Shadowsocks-RSS(server) on your Ubuntu or Debian and s
 Ubuntu/Debian(可以在任意路径运行此脚本):
 
 普通版
-chmod +x ssr-server.sh && ./ssr-server.sh
+wget https://raw.githubusercontent.com/mountainguan/ShadowsocksR-OneClick/master/Normal/ssr-server.sh && chmod +x ssr-server.sh && ./ssr-server.sh
 
 高级版
-chmod +x ssr-hi-server.sh && ./ssr-hi-server.sh
+wget https://raw.githubusercontent.com/mountainguan/ShadowsocksR-OneClick/master/Special/ssr-hi-server.sh && chmod +x ssr-hi-server.sh && ./ssr-hi-server.sh
 
 #普通版脚本运行完后，SS-R会在后台自动运行。想要更改SS-R状态的话，请cd至运行ssr-server.sh的路径并执行以下操作：
 
