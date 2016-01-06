@@ -35,35 +35,14 @@ else
   echo "============================================================"
 fi
 
-dir=`pwd`
-ss="/shadowsocks"
-cd $dir$ss
 
-cat > config.json << END
-{
-    "server":"$IP",
-    "server_ipv6": "::",
-    "local_address":"127.0.0.1",
-    "local_port":1080,
-    "port_password":{
-        "4666":{"protocol":"auth_sha1_compatible", "password":"mountainguan", "obfs":"tls1.0_session_auth_compatible", "obfs_param":""},
-        "2333":{"protocol":"origin", "password":"mountainguan"}
-    },
-    "timeout":300,
-    "method":"chacha20",
-    "protocol": "origin",
-    "protocol_param": "",
-    "obfs": "plain",
-    "obfs_param": "",
-    "redirect": "",
-    "dns_ipv6": false,
-    "fast_open": false,
-    "workers": 1
-}
-END
-cd $dir$ss$ss
+cd /etc
+wget https://raw.githubusercontent.com/mountainguan/ShadowsocksR-OneClick/master/shadowsocks.json
+
+cd ~/shadowsocks/shadowsocks
+
 python server.py -c /etc/shadowsocks.json -d start
-cd $dir
+
 iptables -I INPUT -p tcp -m tcp --dport 2333 -j ACCEPT
 iptables -I INPUT -p tcp -m tcp --dport 4666 -j ACCEPT
 iptables-save
