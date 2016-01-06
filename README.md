@@ -24,7 +24,7 @@ bash shadowsocks/shadowsocks/start.sh
 查看SS-R运行log：
 bash shadowsocks/shadowsocks/tail.sh
 
-#普通版脚本运行完后，SS-R会在后台自动运行。想要更改SS-R状态的话，请cd至运行ssr-server.sh的路径并执行以下操作：
+#高级版脚本运行完后，SS-R会在后台自动运行。想要更改SS-R状态的话，请执行以下操作：
 
 停止SS-R：
 cd ~/shadowsocks/shadowsocks && python server.py -c /etc/shadowsocks.json -d stop
