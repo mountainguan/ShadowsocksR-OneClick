@@ -8,7 +8,7 @@
         "2333":{"protocol":"origin", "password":"mountainguan"}
     },
     "timeout":300,
-    "method":"chacha20",
+    "method":"chacha20-ietf",
     "protocol": "origin",
     "protocol_param": "",
     "obfs": "plain",
