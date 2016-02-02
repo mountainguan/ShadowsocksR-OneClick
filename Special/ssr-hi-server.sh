@@ -19,6 +19,7 @@ tar xf libsodium-1.0.8.tar.gz && cd libsodium-1.0.8
 ./configure && make -j2 && make install
 ldconfig
 
+cd ~
 git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
 
 
