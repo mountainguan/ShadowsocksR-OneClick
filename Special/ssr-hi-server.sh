@@ -9,6 +9,7 @@ echo ""
 echo "一键SSR-server高级版"
 echo ""
 
+apt-get update
 apt-get -y install python-pip
 apt-get -y install m2crypto git
 
