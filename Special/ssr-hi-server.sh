@@ -14,8 +14,8 @@ apt-get -y install python-pip
 apt-get -y install m2crypto git
 
 apt-get install build-essential
-wget https://github.com/jedisct1/libsodium/releases/download/1.0.7/libsodium-1.0.7.tar.gz
-tar xf libsodium-1.0.7.tar.gz && cd libsodium-1.0.7
+wget https://github.com/jedisct1/libsodium/releases/download/1.0.8/libsodium-1.0.8.tar.gz
+tar xf libsodium-1.0.8.tar.gz && cd libsodium-1.0.8
 ./configure && make -j2 && make install
 ldconfig
 
